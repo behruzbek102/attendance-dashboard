@@ -1,43 +1,31 @@
+// src/types/index.ts
+
 export interface Student {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  class: string;
-  rollNumber: number;
-  image?: string;
-  joinDate: string;
+    id: number;
+    name: string;
+    age: number;
+    class: string;
 }
 
 export interface Teacher {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  department: string;
-  specialization: string;
-  image?: string;
+    id: number;
+    name: string;
+    subject: string;
 }
 
 export interface AttendanceRecord {
-  id: string;
-  studentId: string;
-  date: string;
-  status: 'present' | 'absent' | 'leave';
-  subject?: string;
-  remarks?: string;
+    studentId: number;
+    date: string;
+    status: 'present' | 'absent';
 }
 
 export interface DashboardStats {
-  totalStudents: number;
-  totalTeachers: number;
-  presentToday: number;
-  attendancePercentage: number;
-  lastUpdated: string;
+    totalStudents: number;
+    totalAttendance: number;
+    totalTeachers: number;
 }
 
 export interface ApiState {
-  loading: boolean;
-  error: string | null;
-  success: boolean;
+    loading: boolean;
+    error: string | null;
 }
